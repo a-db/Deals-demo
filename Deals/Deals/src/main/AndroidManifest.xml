@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:		Deals
+  ~
+  ~ Package:		Deals-Deals
+  ~
+  ~ Author:		aaronburke
+  ~
+  ~ Date:		 	1 21, 2014
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deals.app" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/deals_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.deals.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <service
+            android:name="com.deals.app.JsonDataService"
+            android:exported="false" />
+
+        <provider
+            android:name="com.deals.app.CollectionProvider"
+            android:authorities="com.deals.app.CollectionProvider"
+            android:exported="true" />
+
+        <activity
+            android:name="com.deals.app.ProductListDetail"
+            android:label="@string/detail_screen_title"
+            android:parentActivityName="com.deals.app.MainActivity" >
+        </activity>
+
+        <activity
+            android:name="com.deals.app.AppInfo"
+            android:label="@string/info_screen_title"
+            android:parentActivityName="com.deals.app.MainActivity" >
+        </activity>
+
+        <!-- StackWidget Provider -->
+        <receiver android:name=".WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/stack_widget_config" />
+        </receiver>
+
+        <!-- StackWidget Service -->
+        <service android:name=".WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

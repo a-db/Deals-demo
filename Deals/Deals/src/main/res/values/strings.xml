@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Project:		Deals
+  ~
+  ~ Package:		Deals-Deals
+  ~
+  ~ Author:		aaronburke
+  ~
+  ~ Date:		 	1 21, 2014
+  -->
+
+<resources>
+
+    <string name="app_name">Deals</string>
+    <string name="main_screen_title">Product List</string>
+    <string name="detail_screen_title">Product Details</string>
+    <string name="all_btn">Show All</string>
+    <string name="main_text">Choose a search filter:</string>
+
+    <!-- Menu Strings -->
+    <string name="action_info">Info</string>
+
+    <!-- App Info Strings -->
+    <string name="dev_info">Created by: Aaron Burke</string>
+    <string name="app_info">The App Demos: JSON, API Data Service, File writing/reading, Widget, Fragments, Content Provider</string>
+    <string name="info_screen_title">Application Information</string>
+
+    <string name="webBtn">View Web</string>
+
+    <string-array name="selection_array">
+        <item>[FILTERS]</item>
+        <item>Desktops</item>
+        <item>Laptops</item>
+        <item>Tablets</item>
+        <item>Unlocked Phones</item>
+    </string-array>
+
+    <string-array name="detail_categories_array">
+        <item>Vendor:</item>
+        <item>Price:</item>
+        <item>Color:</item>
+        <item>MPN:</item>
+        <item>UPC:</item>
+        <item>Mfr:</item>
+    </string-array>
+
+    <string name="title_activity_product_list_detail">ProductListDetail</string>
+    <string name="empty_view_text">empty!</string>
+
+</resources>
